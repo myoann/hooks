@@ -1,0 +1,71 @@
+.Card {
+  width: 320px;
+  height: 480px;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.Card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.CardImage {
+  padding: 0;
+  height: 280px;
+  margin-bottom: 36px;
+}
+.CardImage img {
+  height: 100%;
+}
+
+.CardTitle {
+  font-weight: bold;
+  padding: 0 36px;
+  font-size: 16px;
+}
+
+.CardDescription {
+  padding: 9px 36px;
+  font-size: 14px;
+}
+
+.CardBottom {
+  position: absolute;
+  bottom: 0;
+  width: 248px;
+  padding: 14px 36px;
+}
+
+.CardButton {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  color: #247EF2;
+  cursor: pointer;
+  transition: font-weight .4s ease-in-out;
+  vertical-align: -webkit-baseline-middle;
+}
+.CardButton:hover {
+  font-weight: 600;
+  color: #20A4F8;
+}
+
+.IconThumbsDown, .IconThumbsUp {
+  float: right;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: color .3s ease-in;
+}
+.IconThumbsDown:hover {
+  color: red;
+}
+.IconThumbsUp:hover {
+  color: green;
+}

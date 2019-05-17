@@ -26,18 +26,10 @@ const Card = ({ title, description, image }) => {
   )
 }
 
-const changeMode = (isDarkMode) => {
-  if (isDarkMode) {
-    document.querySelector('body').classList.add('dark');
-    document.querySelectorAll('.Card').forEach(e => e.classList.add('dark'));
-    document.querySelectorAll('.IconThumbsUp').forEach(e => e.classList.add('dark'));
-    document.querySelector('.ThemeBox').classList.add('dark');
-  } else if (document.querySelector('.Card')) {
-    document.querySelector('body').classList.remove('dark');
-    document.querySelectorAll('.Card').forEach(e => e.classList.remove('dark'));
-    document.querySelectorAll('.IconThumbsUp').forEach(e => e.classList.remove('dark'));
-    document.querySelector('.ThemeBox').classList.remove('dark');
-  }
+const changeMode = isDarkMode => {
+  document.querySelectorAll('body, .IconThumbsUp, .Card, .ThemeBox').forEach(e =>
+    isDarkMode ? e.classList.add('dark') : e.classList.remove('dark')
+  );
 }
 
 export default Card;

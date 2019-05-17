@@ -4,9 +4,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+body.dark {
+  background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-027.jpg")
+}
+
 .CardListing {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding-top: 5%;
 }

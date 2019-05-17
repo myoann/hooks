@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 import './index.css';
-import Card from './V2/CardWithHooks';
+import Card from './Card';
+import ChangeThemeBox from './ChangeThemeBox';
 
 const cardsContent = [
   {
@@ -23,10 +24,13 @@ const cardsContent = [
 ]
 
 const App = () => (
-  <section className="CardListing">
-    {cardsContent.map(c =>
-      <Card title={c.title} description={c.description} image={c.image} />
-    )}
+  <section>
+    <ChangeThemeBox />
+    <div className="CardListing">
+      {cardsContent.map(c =>
+        <Card title={c.title} description={c.description} image={c.image} />
+      )}
+    </div>
   </section>
 );
 
